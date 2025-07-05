@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kepribadian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>TES KEPRIBADIAN TENTANG EKSPLORASI KECEMASAN SOSIAL PADA PENGGUNA APLIKASI ONLINE DATING</h1>
+       
+
+        <!-- Formulir Biodata -->
+        <div id="biodataForm">
+            <label>Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label>Umur:</label>
+            <input type="number" id="umur" required>
+
+            <label>Pekerjaan:</label>
+            <select id="pekerjaan">
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Umum">Umum</option>
+            </select>
+
+            <label>Jenis Kelamin:</label>
+            <select id="gender">
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <button onclick="startQuiz()">Mulai Tes</button>
+            <a href="results.html" class="result-link">Lihat Semua Hasil</a>
+        </div>
+
+        <!-- Formulir Quiz -->
+        <form id="quizForm" class="hidden">
+            <div id="questions"></div>
+            <button type="button" onclick="submitQuiz()">Lihat Hasil</button>
+        </form>
+
+        <!-- Hasil Tes -->
+        <div id="result" class="hidden">
+            <h2>Hasil Tes</h2>
+            <div class="result-box">
+                <p><strong>Nama:</strong> <span id="userName"></span></p>
+                <p><strong>Umur:</strong> <span id="userAge"></span></p>
+                <p><strong>Pekerjaan:</strong> <span id="userJob"></span></p>
+                <p><strong>Jenis Kelamin:</strong> <span id="userGender"></span></p>
+                <p><strong>Hasil:</strong> <span id="resultText"></span></p>
+            </div>
+            <button onclick="restartQuiz()">Mulai Lagi</button>
+            <a href="results.html" class="result-link">Lihat Semua Hasil</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
